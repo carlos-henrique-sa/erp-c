@@ -4,12 +4,12 @@ const prisma = new PrismaClient();
 
 async function main() {
   // ... you will write your Prisma Client queries here
-  await prisma.user.create({
-    data: {
-      email: 'alice@prisma.io',
-      password: 'teste',
-    },
-  });
+  // await prisma.user.create({
+  //   data: {
+  //     email: 'alice@prisma.io',
+  //     password: 'teste',
+  //   },
+  // });
 
   const allUsers = await prisma.user.findMany();
   console.dir(allUsers, { depth: null });
